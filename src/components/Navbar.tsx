@@ -7,7 +7,7 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className="flex items-center justify-between px-6 py-4 bg-light-background dark:bg-dark-background z-50 relative">
+            <nav className={`fixed top-0 left-0 w-full z-50 flex items-center justify-between px-6 py-4 bg-light-background dark:bg-dark-background ${!isOpen ? " bg-white/60 backdrop-blur-md shadow-md" : ""}`}>
                 {/* Logo */}
                 <div className={`text-xl font-bold text-light-text dark:text-dark-text transition-colors duration-300 ease-in-out ${isOpen ? "backdrop-blur-md text-white" : ""}`}>
                     FitZen
@@ -29,7 +29,9 @@ const Navbar = () => {
 
             {/* Fullscreen menu */}
             <div
-                className={`fixed top-0 left-0 w-full h-full bg-white/60 dark:bg-gray-900/60 backdrop-blur-md text-gray-900 dark:text-gray-100 flex flex-col items-center justify-center transition-opacity duration-300 ease-in-out z-40 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+                className={`fixed top-0 left-0 w-full h-full bg-white/60 dark:bg-gray-900/60 backdrop-blur-md text-gray-900 
+                    dark:text-gray-100 text-center flex-col items-center justify-center transition-opacity duration-300 ease-in-out z-40 flex 
+                    ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
                     }`}
             >
                 <ul className="space-y-8 text-2xl font-medium">
