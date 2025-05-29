@@ -1,10 +1,26 @@
+import { motion } from "framer-motion";
+
 function Pricing() {
     return (
         <div>
-            <div className="bg-stone-50 text-black-50 py-20 px-9 flex items-center justify-left">
+            <div className="bg-stone-50 text-black-50 py-20 px-9 flex items-center justify-left" id="pricing">
                 <div className="max-w-7xl mx-auto">
-                    <h1 className="text-4xl font-semibold mb-8 text-center">Pricing</h1>
-                    <p className="text-lg mb-8 text-center">Choose a plan that fits your needs.</p>
+                    <motion.h2
+                        className="text-4xl font-semibold mb-4 text-center"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                    >
+                        Pricing
+                    </motion.h2>
+                    <motion.p
+                        className="text-gray-600 mb-10 text-center"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ delay: 0.2, duration: 0.6 }}
+                    >
+                        Choose a plan that fits your needs.
+                    </motion.p>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                         <div className="bg-white shadow-md rounded-lg p-6 border-indigo-500 border-2">
                             <h2 className="text-xl font-semibold mb-2">Basic Plan</h2>

@@ -1,3 +1,4 @@
+import Contact from "./components/Contact";
 import Features from "./components/Features";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
@@ -13,6 +14,7 @@ function App() {
       <Features />
       <Testimonials />
       <Pricing />
+      <Contact />
       <Footer />
     </div>
   );

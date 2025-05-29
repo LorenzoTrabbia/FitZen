@@ -8,7 +8,7 @@ function Footer() {
                     <div className="flex justify-center space-x-4">
                         <a className="text-gray-500 hover:text-gray-700">Privacy Policy</a>
                         <a className="text-gray-500 hover:text-gray-700">Terms of Service</a>
-                        <a className="text-gray-500 hover:text-gray-700">Contact Us</a>
+                        <a className="text-gray-500 hover:text-gray-700" href="#contact">Contact Us</a>
                     </div>
                 </div>
             </div>
