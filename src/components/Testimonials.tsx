@@ -66,7 +66,7 @@ function Testimonials() {
                         className="w-full overflow-x-auto overflow-y-hidden no-scrollbar shadow-md rounded-lg p-6"
                         style={{ maxWidth: "100vw" }}
                     >
-                        <div className="flex space-x-6 md:space-x-12 min-w-max">
+                        <div className="mx-auto flex justify-start space-x-6 md:space-x-12 w-max">
                             {testimonials.map(({ id, name, role, text, avatar }) => (
                                 <motion.div
                                     key={id}
