@@ -3,17 +3,13 @@ import Features from "./components/Features";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
-import Pricing from "./components/Pricing";
-import Testimonials from "./components/Testimonials";
 
 function App() {
   return (
-    <div>
+    <div className="min-h-screen overflow-x-hidden bg-canvas text-ink">
       <Navbar />
       <Hero />
       <Features />
-      <Testimonials />
-      <Pricing />
       <Contact />
       <Footer />
     </div>

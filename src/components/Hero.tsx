@@ -1,47 +1,47 @@
 import { motion } from "framer-motion";
 import heroMockup from "../assets/mockup.svg";
+import { ArrowDownRight, Check } from "lucide-react";
 
 function Hero() {
     return (
-        <section className="relative bg-stone-50 pt-24 px-6 md:px-12 lg:px-20 overflow-hidden">
-            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between">
+        <section id="top" className="hero-section">
+            <div className="page-shell hero-grid">
                 <motion.div
                     initial={{ opacity: 0, x: -50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6 }}
-                    className="lg:w-1/2"
+                    className="hero-copy"
                 >
-                    <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
-                        Train smarter.<br />Live better.
-                    </h1>
-                    <p className="text-lg text-gray-700 mb-8">
-                        FitZen is your all-in-one fitness companion: workouts, nutrition, and motivation — in your pocket.
+                    <p className="eyebrow"><span className="eyebrow-dot" />A calmer way to get fit</p>
+                    <h1 className="display-title">Train smarter.<br /><em>Live better.</em></h1>
+                    <p className="hero-lede">
+                        FitZen brings workouts, nutrition, and progress into one focused space—so your routine feels easier to keep.
                     </p>
-                    <a
-                        href="#pricing"
-                        className="inline-block text-white bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700 
-                        hover:bg-gradient-to-br focus:outline-none focus:ring-4 focus:ring-indigo-300 dark:focus:ring-indigo-800 
-                        font-medium rounded-lg text-sm px-6 py-3 text-center"
-                    >
-                        Join the Beta
-                    </a>
+                    <div className="flex flex-wrap items-center gap-3">
+                        <a href="#features" className="button button-primary">Explore FitZen <ArrowDownRight size={18} aria-hidden="true" /></a>
+                        <a href="#contact" className="button button-quiet">Talk to us</a>
+                    </div>
+                    <div className="hero-points" aria-label="FitZen capabilities">
+                        <span><Check size={16} aria-hidden="true" /> Workouts</span>
+                        <span><Check size={16} aria-hidden="true" /> Nutrition</span>
+                        <span><Check size={16} aria-hidden="true" /> Progress</span>
+                    </div>
                 </motion.div>
 
                 <motion.div
                     initial={{ opacity: 0, x: 50 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
-                    className="hidden lg:block lg:w-1/2"
+                    className="hero-visual"
                 >
                     <img
                         src={heroMockup}
-                        alt="App mockup"
-                        className="max-w-full h-auto"
+                        alt="FitZen fitness app interface preview"
+                        className="hero-mockup"
                     />
                 </motion.div>
             </div>
-
-            <div className="absolute top-[-80px] right-[-120px] w-[300px] h-[300px] bg-indigo-100 rounded-full opacity-50 blur-3xl z-0 hidden lg:block" />
+            <a className="hero-scroll" href="#features">Scroll to explore <ArrowDownRight size={16} aria-hidden="true" /></a>
         </section>
     );
 }
